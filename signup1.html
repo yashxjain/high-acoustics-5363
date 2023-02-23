@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="/images/io.ico">
+    <title>Signup </title>
+    <link rel="stylesheet" href="./signup1.css">
+    <script src="https://kit.fontawesome.com/4052196a9f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="bodymin">
+        <div id="slideshow">
+            <h2>Start Your Journey towards the Healthy Lifestyle</h2>
+        </div>
+        <div class="set">
+            <div class="nav">
+
+            </div>
+            <div id="signup">
+                <a href="./index.html"><img src="./images/io.ico" alt=""></a>
+
+                <h2>Register</h2>
+                <h3 id="heading">Email ID/Mobile No.</h3>
+
+                <form>
+                    <input type="text" id="name" placeholder="Full Name"><br>
+                    <input type="number" id="mobile" placeholder="Mobile No."><br><br>
+                    <input type="email" id="email" placeholder="Emaid ID"><br>
+                    <input type="password" id="password" placeholder="Password"><br>
+                    <p>Password must be at least 8 characters long with 1 Uppercase, 1 Lowercase & 1 Numeric character.
+                    </p>
+                    <button class="submit">
+                        <input type="submit" value="Submit" /></button>
+                </form>
+            </div>
+            <div class="back">
+                <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="./login1.html"><i class="fa-solid fa-circle-chevron-left"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+
+
+
+    let name = document.getElementById("name");
+    let phone = document.getElementById("mobile")
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let personData = [];
+    document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let obj = {
+            Name: name.value,
+            Email: email.value,
+            Password: password.value,
+            MobileNo: phone.value
+        }
+        personData.push(obj);
+        localStorage.setItem("account-data", JSON.stringify(personData));
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: 'Signup Successfully',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        setTimeout(() => {
+            window.location.href = "./home.html"
+        }, 1000)
+    })
+
+
+
+
+
+
+    let imgtag = document.createElement("img");
+
+    let slidediv = document.getElementById("slideshow");
+
+    slidediv.append(imgtag);
+    let currentIndex = 0;
+
+
+    var movieImages = [
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/1.svg",
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/2.svg",
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/3.svg"
+    ];
+
+    slideshowFun(movieImages);
+
+    function slideshowFun(images) {
+        imgtag.setAttribute("src", images[currentIndex]);
+        if (currentIndex == images.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+    }
+
+
+    window.addEventListener("load", function () {
+        setInterval(slideshowFun, 2000, movieImages);
+
+        // add event-listeners;
+    });
+</script>
+
+</html>

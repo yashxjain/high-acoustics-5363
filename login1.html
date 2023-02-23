@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="/images/io.ico">
+    <title>Login </title>
+    <link rel="stylesheet" href="login1.css">
+    <script src="https://kit.fontawesome.com/4052196a9f.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div id="bodymin">
+        <div id="slideshow">
+            <h2>Start Your Journey towards the Healthy Lifestyle</h2>
+        </div>
+
+        <div class="set">
+            <a href="./index.html"><img src="images/io.ico" alt=""></a>
+            <div class="nav">
+                <!-- <a href="./index.html">Home</a> -->
+            </div>
+
+            <div id="signin">
+                <h2>Login / Register</h2>
+                <h3 id="heading">Email ID/Mobile No.</h3>
+                <form>
+                    <input type="email" id="email" placeholder="Email" /><br>
+                    <input type="number" id="mobile" placeholder="Mobile No."><br>
+                    <input type="password" id="password" placeholder="Password" /><br>
+                    <a href=""><button id="cont" value="CONTINUE">CONTINUE</button></a>
+                    <h4>---------------OR---------------</h4>
+                </form>
+            </div>
+            <h4>New to WLH?<a href="./signup1.html" style="text-decoration: none" ;>Ragister Here</a></h4>
+            <div class="back">
+                <a href="./index.html"><i class="fa-solid fa-house-user"></i></a>
+                <a href="./index.html"><i class="fa-brands fa-google"></i></a>
+                <a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook"></i></i></a>
+            </div>
+
+            <p>By continuing, you agree to WHL's <a href="" style="text-decoration: none;">
+                    Conditions of Use</a> and <a href="" style="text-decoration: none;"> Privacy Notice.</a></p>
+
+        </div>
+    </div>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    let imgtag = document.createElement("img");
+
+    let slidediv = document.getElementById("slideshow");
+
+    slidediv.append(imgtag);
+    let currentIndex = 0;
+
+
+    var movieImages = [
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/1.svg",
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/2.svg",
+        "https://static1.hkrtcdn.com/hknext/static/media/login/slider/3.svg"
+    ];
+
+    slideshowFun(movieImages);
+
+    function slideshowFun(images) {
+        imgtag.setAttribute("src", images[currentIndex]);
+        if (currentIndex == images.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+    }
+
+
+    window.addEventListener("load", function () {
+        setInterval(slideshowFun, 2000, movieImages);
+
+        // add event-listeners;
+    });
+    ///////////////////////////////////////////////////////////
+
+    let email = document.getElementById("email")
+    let mobile = document.getElementById("mobile")
+    let password = document.getElementById("password");
+
+    let storeddata = JSON.parse(localStorage.getItem("account-data"))
+    document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        display(storeddata);
+        function display(data) {
+            data.forEach((e, i) => {
+                if (email.value === e.Email && password.value === e.Password && mobile.value === e.MobileNo) {
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        title: 'Login Successfully',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    setTimeout(() => {
+                        window.location.href = "./home.html"
+                    }, 1000)
+
+                }
+                else {
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Wrong Credentials',
+                        footer: '<a href="">The email address or password you entered isnt match </a>'
+                    })
+
+                }
+            })
+        }
+
+    })
+
+</script>
+
+</html>

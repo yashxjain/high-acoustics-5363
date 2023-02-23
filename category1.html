@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/images/io.ico">
+    <title>Best Sellers</title>
+</head>
+<link rel="stylesheet" href="/products.css">
+<link rel="stylesheet" href="/index.css">
+
+<body>
+    <div id="nav">
+        <div><a href="/index.html">
+                <img src="/images/io.ico" alt="">
+            </a>
+        </div>
+        <div id="searchopt">
+            <input id="search" placeholder="Search for products and brands..." type="text">
+        </div>
+
+        <a id="login" href="/home.html">My Account</a>
+        <div id="cartimg">
+            <a href="/home.html">
+                <img src="/images/home.png" alt="Add to cart">
+            </a>
+        </div>
+    </div>
+    <br>
+    <section>
+
+        <!-- Use this Select Tag for Filtering the Products  -->
+        <select id="filter">
+            <option value="">Filter By Category</option>
+            <option value="Laptop">Medicines</option>
+            <option value="Mobile">Proteins</option>
+            <option value="Speakers">Gainers</option>
+            <option value="Carbos">Carbos</option>
+        </select>
+        <div id="product-container">
+            <!-- Here Append All the Products  -->
+        </div>
+    </section>
+</body>
+
+</html>
+<script src="./home.js"></script>

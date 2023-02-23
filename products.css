@@ -1,0 +1,243 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+
+#nav {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    justify-content: space-around;
+    height: 120px;
+    position: sticky;
+    top: 0;
+    gap: 200px;
+
+
+}
+
+#product-container button:hover {
+    cursor: pointer;
+
+}
+
+#nav>div>:nth-child(1) {
+    width: 25%;
+
+}
+
+#nav :nth-child(1) a img {
+    width: 100%;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+#searchopt {
+
+    width: 450px;
+    height: 50px;
+    margin-top: 40px;
+    position: sticky;
+    top: 0;
+
+
+}
+
+#searchopt input[type="text"] {
+    height: 40px;
+    width: 450px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#login {
+    margin: auto;
+    font-size: 30px;
+    height: 70px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login1 {
+    margin: auto;
+    font-size: 30px;
+    height: 40px;
+    width: 170px;
+    margin-top: 40px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contactus {
+
+
+    font-size: 30px;
+    height: 80px;
+    width: 250px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#contactus:hover {
+    background-color: green;
+}
+
+#login:hover {
+    background-color: green;
+}
+
+#login1:hover {
+    background-color: green;
+}
+
+#cartimg {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 40px;
+    width: 100px;
+    height: 100px;
+
+    position: sticky;
+    top: -1;
+
+}
+
+#cartimg>a>img {
+    width: 100%;
+    position: sticky;
+    top: 0;
+
+
+}
+
+
+.dropbtn {
+    padding: 7px;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    color: orange;
+
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background: linear-gradient(to bottom, #e7d653 0%, #7be74d 100%);
+    min-width: 100px;
+    z-index: 1;
+}
+
+
+
+.dropdowncontent a {
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.dropdown:hover .dropdowncontent {
+    display: flex;
+
+}
+
+.dropdown:hover .dropdowncontent div {
+    display: flex;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: orange;
+    color: green;
+}
+
+#deals {
+    width: 150px;
+}
+
+#deals img {
+    width: 100%;
+}
+
+#selectors {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    justify-content: space-around;
+    position: sticky;
+    top: 2;
+    background: white;
+
+}
+
+#body {
+    display: flex;
+
+}
+
+#leftside {
+
+    width: 25%;
+    height: 500px;
+    position: fixed;
+}
+
+#categories {
+
+    width: 100%;
+    margin-left: 70px;
+}
+
+#rightside {
+
+
+    width: 75%;
+    margin-left: 25%;
+
+}
+
+#images {
+    display: flex;
+    gap: 20px;
+}
+
+#rightimg :nth-child(2) {
+    margin-top: 5px;
+}

@@ -1,0 +1,264 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Lato;
+    background-color: #f2f2f2;
+    background: linear-gradient(to bottom, #e7d653 0%, #7be74d 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.dermstore_navbar {
+    background-color: #ffffff;
+    height: 72px;
+    position: sticky;
+    top: 0;
+}
+
+.nav_logo_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #e7d653 0%, #7be74d 100%);
+}
+
+.nav_logo {
+    position: absolute;
+    left: 36px;
+    top: 12px;
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+}
+
+.main_container {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    /* min-height: 100vh; */
+    height: auto;
+    gap: 32px;
+}
+
+.existing_customers {
+    margin-top: 56px;
+    padding: 32px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 458px;
+    height: fit-content;
+}
+
+.section_title {
+    padding-bottom: 24px;
+    color: #333333;
+    font-size: 24px;
+}
+
+.new_customers {
+    margin-top: 56px;
+    padding: 32px;
+    background-color: #ffffff;
+    height: fit-content;
+    width: 100%;
+    max-width: 458px;
+}
+
+.primary_btn {
+    background-color: orange;
+    border: none;
+    color: #fff;
+    width: 100%;
+    max-width: 208px;
+    padding: 16px 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.primary_btn:hover {
+    background-color: rgb(96, 96, 96);
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.secondary_btn {
+    border: 1px solid orange;
+    color: orange;
+    width: 100%;
+    max-width: 208px;
+    padding: 16px 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.secondary_btn:hover {
+    background-color: #CCCCCC;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.field_title {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.field_input {
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(140, 140, 140);
+    color: rgb(51, 51, 51);
+    padding: 12px 8px;
+    font-size: 14px;
+}
+
+.field_input:focus-visible {
+    border-width: 2px;
+    border-color: rgb(31, 31, 31);
+    outline: none;
+}
+
+.field_container {
+    margin-bottom: 40px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underline:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.forgot_password_title {
+    font-size: 14px;
+}
+
+.continue_with_text {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.login_through_socials_container {
+    display: flex;
+    font-weight: 600;
+    color: #666666;
+}
+
+.login_through_socials_container {
+    border-width: 1px;
+    gap: 32px;
+}
+
+.socials_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgb(140, 140, 140);
+    padding: 10px;
+    width: 100%;
+}
+
+.socials_btn:hover {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.maindiv {
+    display: grid;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.socialsbtns {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+
+.inputClass {
+    display: grid;
+    row-gap: 5px;
+    margin-bottom: 20px;
+}
+
+.inputClass>input {
+    height: 40px;
+}
+
+.referal {
+    background-color: rgb(242, 242, 242);
+    height: 80px;
+}
+
+.referal>label {
+    width: 90%;
+    padding-left: 20px;
+    margin-top: 4px;
+}
+
+.referal>input {
+    width: 90%;
+    margin: auto;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+#blackbtn {
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border: none;
+
+    width: 100%;
+    height: 40px;
+    margin: auto;
+}
+
+.socials_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid rgb(140, 140, 140);
+    padding: 10px;
+    width: 100%;
+}
+
+.socials_btn:hover {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+}
